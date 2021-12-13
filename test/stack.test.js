@@ -22,9 +22,10 @@ class Stack {
     }
 }
 
-/** Recordemos que un stack o pila, es donde el primero que entra 
+/** Recordemos que un stack o pila, es donde el ultimo que entra es el primero que entra 
 *** es el primero que sale
 **/
+
 // 1. First we r goin to give a name to the test suite
 
 describe('My Stack', () => {
@@ -73,8 +74,7 @@ describe('My Stack', () => {
 
         stack.pop();
         expect(stack.top).toBe(-1);
-        
+
     });
 
-    
 })
