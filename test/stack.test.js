@@ -3,6 +3,23 @@ class Stack {
         this.top = -1;
         this.items = {};
     }
+
+    get peek(){
+        return this.items[this.top];
+    }
+
+    top() {
+        return this.top;
+    }
+
+    push(value){
+        this.top += 1;
+        this.items[this.top] = value;
+    }
+
+    pop() {
+        this.top -= 1;
+    }
 }
 
 /** Recordemos que un stack o pila, es donde el primero que entra 
@@ -33,22 +50,31 @@ describe('My Stack', () => {
         expect(stack.items).toEqual({})
     });
 
+    
+    it('can push to the top | puede agregarse ?', () => {
+        stack.push('🥑')
+
+        // I expect that to be index 0
+        expect(stack.top).toBe(0);
+        expect(stack.peek).toBe('🥑');
+
+        stack.push('🍿')
+        expect(stack.top).toBe(1);
+        expect(stack.peek).toBe('🍿');
+    });
 
 
+    it('can pop off | puede eliminarse', () => {
+        stack.push('🥑')
+        
+        expect(stack.top).toBe(0);
+        expect(stack.peek).toBe('🥑');
 
 
-
-
-
-
-
-
-
-
-
-    // it('can push to the top | puede agregarse en el inicio');
-
-    // it('can pop off | puede eliminarse');
+        stack.pop();
+        expect(stack.top).toBe(-1);
+        
+    });
 
     
 })

@@ -4,7 +4,7 @@
   "description": "tdd basics",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll --verbose "
+    "test": "jest --watchAll --verbose --coverage"
   },
   "author": "emma",
   "license": "ISC",
